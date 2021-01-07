@@ -1,0 +1,10 @@
+__pycache__/
+build/
+ccpt.spec
+dist/
+bin/
+lib/
+lib64
+pyvenv.cfg
+share/
+
