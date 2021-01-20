@@ -2,13 +2,6 @@
 
 Generates a C++ Competitive Programming Template File.<br />
 
-## Credits for Template
-
-Template from https://gist.github.com/kodekracker/e09f9d23573f117a5db0a
-
-- Author: Akshay Pratap Singh
-- Handle: code_crack_01
-
 ## Clone
 
 ```bash

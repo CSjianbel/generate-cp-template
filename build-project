@@ -1,7 +1,0 @@
-pip install -r requirements.txt
-
-pyinstaller ccpt.py --onefile
-
-cp ./template.cpp ./dist/
-
-echo "Usage: ./ccpt [outfile.cpp]"

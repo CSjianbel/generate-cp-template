@@ -23,4 +23,3 @@ except OSError:
     sys.exit(3)
     
 print(f"Created CP template on {OUTFILE_PATH}")
-
