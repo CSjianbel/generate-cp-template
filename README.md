@@ -5,7 +5,7 @@ Generates a C++ Competitive Programming Template File.<br />
 ## Clone
 
 ```bash
-git clone https://github.com/CSjianbel/create-cp-template.git
+git clone "https://github.com/CSjianbel/create-cp-template.git"
 ```
 
 ## Compilation
