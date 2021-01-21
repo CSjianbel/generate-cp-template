@@ -1,12 +1,14 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include <regex>
 
+/* Get root home directory */
+std::string const HOME = std::getenv("HOME") ? std::getenv("HOME") : ".";
 /* Constant Path to the Template Directory and Template File */
-std::string tempFile = "./templates/template.cpp";
+std::string tempFile = HOME + "/bin/create-cp-template/templates/template.cpp";
 
-bool verifyOutfilePath(char *path);
+bool verifyOutfilePath(std::string path);
+bool has_suffix(const std::string &str, const std::string &suffix);
 
 int main(int argc, char *argv[])
 {
@@ -16,21 +18,54 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    std::ifstream infile(tempFile); // opens the template file for reading
+    std::string outFilePath(argv[1]);
+
+    if (!verifyOutfilePath(outFilePath))
+    {
+        std::cout << "Invalid Outfile Path: " << argv[1] << std::endl;
+        return 2;
+    }
+
+    // opens the template file for reading
+    std::ifstream infile(tempFile);
+    if (!infile)
+    {
+        // Delete the outfile created when verifying...
+        remove(argv[1]);
+        std::cout << "Template File cannot be found or accessed...\n";
+        return 3;
+    } 
     std::string content = "", temp;
 
-    while (getline(infile, temp)) // reads in the whole template file
+    // reads in the whole template file
+    while (getline(infile, temp)) 
         content += temp + "\n";
 
-    infile.close(); // close the file
+    // close the file
+    infile.close(); 
 
-    std::ofstream outfile(argv[1]); // opens the new file
-    outfile << content; // write the content of template file to the new file
+    // opens the new file
+    std::ofstream outfile(outFilePath); 
+    // write the content of template file to the new file
+    outfile << content;
 
-    outfile.close(); // close the file
+    // close the file
+    outfile.close();
+
+    std::cout << "Template Created on " << outFilePath << " :)" << std::endl;
 }
 
-bool verifyOutfilePath(char *path)
+bool has_suffix(const std::string &filepath, const std::string &file_ext)
 {
-    return true;
+    return filepath.size() >= file_ext.size() &&
+           filepath.compare(filepath.size() - file_ext.size(), file_ext.size(),file_ext) == 0;
+}
+
+bool verifyOutfilePath(std::string filepath)
+{
+    if (!has_suffix(filepath, ".cpp"))
+        return false;
+
+    std::ofstream test(filepath);
+    return test ? true : false;
 }
