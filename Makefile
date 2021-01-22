@@ -1,5 +1,5 @@
 CC = clang++
-FLAGS = -Wall -Werror -std=c++17 
+FLAGS = -std=c++17 -Wshadow -Wall -Wno-unused-result 
 FILE = ccpt
 
 ccpt: 
