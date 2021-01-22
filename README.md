@@ -11,6 +11,8 @@ git clone "https://github.com/CSjianbel/create-cp-template.git"
 ## Compilation
 
 ```
+cd create-cp-template
+
 make
 ```
 
@@ -23,7 +25,7 @@ Therefore you will have access to the executable globally in your system.<br />
 
 - Create a **bin/** directory in your root directory (~)
 - Create another directory within the bin directory
-- Open **ccpt.cpp** and set the **tempFile** variable to your desired path to the **template.cpp** file
+- Open **ccpt.cpp** and set the **tempFile** variable to your desired path to the **template.cpp** file and **Makefile**
 - Copy the compiled executable and the templates folder inside the directory you created
 - Add the directory to your PATH
 
