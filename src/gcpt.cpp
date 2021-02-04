@@ -5,9 +5,9 @@
 /* Get root home directory */
 std::string const HOME = std::getenv("HOME") ? std::getenv("HOME") : ".";
 /* Constant Path to the Template Directory and Template File */
-std::string tempFile = HOME + "/bin/create-cp-template/templates/template.cpp";
+std::string tempFile = HOME + "/bin/generate-cp-template/templates/template.cpp";
 /* Constant Path to the Template Directory and Makefile Template File */
-std::string tempMakeFile = HOME + "/bin/create-cp-template/templates/Makefile";
+std::string tempMakeFile = HOME + "/bin/generate-cp-template/templates/Makefile";
 
 bool verifyOutfilePath(std::string path);
 bool getExtension(const std::string &str, const std::string &suffix);
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        std::cout << "Usage: ./ccpt [outfile.cpp]" << std::endl;
+        std::cout << "Usage: ./gcpt [outfile.cpp]" << std::endl;
         return 1;
     }
 

@@ -1,17 +1,17 @@
-# Create C++ Competitive Programming Template
+# Generate C++ Competitive Programming Template
 
 Generates a C++ Competitive Programming Template File.<br />
 
 ## Clone
 
 ```bash
-git clone "https://github.com/CSjianbel/create-cp-template.git"
+git clone "https://github.com/CSjianbel/generate-cp-template.git"
 ```
 
 ## Compilation
 
 ```
-cd create-cp-template
+cd generate-cp-template
 
 make
 ```
@@ -25,14 +25,14 @@ Therefore you will have access to the executable globally in your system.<br />
 
 - Create a **bin/** directory in your root directory (~)
 - Create another directory within the bin directory
-- Open **ccpt.cpp** and set the **tempFile** variable to your desired path to the **template.cpp** file and **Makefile**
+- Open **gcpt.cpp** and set the **tempFile** variable to your desired path to the **template.cpp** file and **Makefile**
 - Copy the compiled executable and the templates folder inside the directory you created
 - Add the directory to your PATH
 
 ## Usage
 
 ```bash
-./ccpt [outfile_path.cpp]
+./gcpt [outfile_path.cpp]
 ```
 
 ## Contributing
