@@ -7,3 +7,6 @@ gcpt:
 
 debug:
 	$(CC) $(FLAGS) -O0 -ggdb3 -o $(OUT) $(OUT).cpp
+	
+clean: 
+	rm $(OUT)
