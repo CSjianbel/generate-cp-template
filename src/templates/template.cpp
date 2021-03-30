@@ -1,32 +1,7 @@
-/********   All Required Header Files ********/
-#include <iostream>
-#include <string>
-#include <vector>
-#include <algorithm>
-#include <sstream>
-#include <queue>
-#include <deque>
-#include <bitset>
-#include <iterator>
-#include <list>
-#include <stack>
-#include <map>
-#include <unordered_map>
-#include <set>
-#include <unordered_set>
-#include <functional>
-#include <numeric>
-#include <utility>
-#include <limits>
-#include <time.h>
-#include <math.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <assert.h>
+/********   All Required  Files ********/
+#include <bits/stdc++.h>
 
-using namespace std;
-
+/********   Macros & Constants  ********/
 #define ll long long
 #define FOR(i, j, k, in) for (int i=j ; i<k ; i+=in)
 #define RFOR(i, j, k, in) for (int i=j ; i>=k ; i-=in)
@@ -40,21 +15,28 @@ using namespace std;
 #define read(type) readInt<type>()
 const double pi=acos(-1.0);
 
-/******** User-defined Function *******/
+using namespace std;
+
+/********** Solution **********/
 void solve()
 {
-	cout << endl;
+	// Code Here
 }
 
 /********** Main()  function **********/
 int main()
 {
-	int t, c = 1;
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	int t;
 	cin >> t;
-	while (t--)
+
+	for (int i = 1; i <= t; i++)
 	{
-		cout << "Case #" << c++ << ": ";
+		printf("Case #%d: ", i);
 		solve();
+		printf("\n");
 	}
 	return 0;
 }
