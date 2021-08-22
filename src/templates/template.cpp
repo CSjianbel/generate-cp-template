@@ -34,9 +34,9 @@ int main()
 
 	for (int i = 1; i <= t; i++)
 	{
-		printf("Case #%d: ", i);
+		cout << "Case #" << i << ": ";
 		solve();
-		printf("\n");
+		cout << "\n";
 	}
 	return 0;
 }
