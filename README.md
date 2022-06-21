@@ -2,6 +2,8 @@
 
 Generates a C++ Competitive Programming Template File.<br />
 
+something
+
 ## Clone
 
 ```bash
